@@ -228,6 +228,7 @@ def add_announcement():
     if errors:
         print('\n', errors, '\n')
         show_error_popup(errors, "ValueError")
+        return
 
     # button disabled while playing announcement
     announcement_button.configure(state="disabled")

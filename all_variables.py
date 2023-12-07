@@ -1,6 +1,6 @@
 import os
 
-base_path = os.getcwd()
+base_path = os.path.dirname(os.path.abspath(__file__))
 image_path = str(base_path) + "/s.png"
 data_db = str(base_path) + "/user_data.db"
 
