@@ -75,6 +75,28 @@ def hindi_announce(data):
     list_play(lst)
 
 
+def mar_announce(data):
+    lst = [
+        bell_start,
+        mar_start,
+    ]
+    lst.extend([mar_num[i] for i in data['train_number']])
+    lst.extend([
+        cities[data['source_station']],
+        cities[data['destination_station']],
+        train_type[data['train_type']],
+    ])
+    if data['announcement_type'] == "Arrival":
+        lst.append(hindi_out)
+        lst.extend([mar_num[i] for i in data['platform_number']])
+        lst.append(mar_out_arv)
+    else:
+        lst.append(mar_out)
+        lst.extend([mar_num[i] for i in data['platform_number']])
+        lst.extend([mar_out_dep, bell_end])
+    list_play(lst)
+
+
 def guj_announce(data):
     lst = [
         bell_start,
@@ -141,7 +163,7 @@ def login():
         root.geometry("920x600")
         label_0.config(text='-: INDIAN  RAILWAYS  ANNOUNCEMENT  SOFTWARE  SYSTEM :-')
         form_frame.grid(column=0, row=2)  # Show the main form frame
-        show_error_popup("Login Successful!", 'Login')
+        show_error_popup(f"Welcome {username}!", 'Login Successful!')
     else:
         show_error_popup("Invalid username or password")
 
@@ -224,6 +246,7 @@ def add_announcement():
     # play announcement from received data from Gui
     for i in range(int(data['repeat_number'])):
         guj_announce(data)
+        mar_announce(data)
         hindi_announce(data)
         eng_announce(data)
 

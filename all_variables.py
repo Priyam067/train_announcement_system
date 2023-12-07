@@ -563,6 +563,22 @@ hindi_num = {"0": str(base_path) + "/hindi/0_hin.wav", "1": str(base_path) + "/h
 hi_se = str(base_path) + '/hindi/se.mp3'
 jane_wali = str(base_path) + '/hindi/jane_vali.mp3'
 
+mar_start = str(base_path) + "/marathi/intro_mar.mp3"
+mar_out = str(base_path) + "/marathi/outro_arv_mar_1.mp3"
+mar_out_arv = str(base_path) + "/marathi/outro_arv_mar_2.mp3"
+mar_out_dep = str(base_path) + "/marathi/outro_dep.wav"
+mar_num = {"0": str(base_path) + "/marathi/0_hin.wav",
+           "1": str(base_path) + "/marathi/1_mar.mp3",
+           "2": str(base_path) + "/marathi/2_mar.mp3",
+           "3": str(base_path) + "/marathi/3_mar.wav",
+           "4": str(base_path) + "/marathi/4_mar.mp3",
+           "5": str(base_path) + "/marathi/5_mar.mp3",
+           "6": str(base_path) + "/marathi/6_mar.mp3",
+           "7": str(base_path) + "/marathi/7_mar.mp3",
+           "8": str(base_path) + "/marathi/8_mar.mp3",
+           "9": str(base_path) + "/marathi/9_mar.mp3"}
+
+
 # gujrati announcement
 guj_num = {"0": str(base_path) + "/gujrati/1.mp3", "1": str(base_path) + "/gujrati/1.mp3",
            "2": str(base_path) + "/gujrati/2.mp3", "3": str(base_path) + "/gujrati/3.mp3",
